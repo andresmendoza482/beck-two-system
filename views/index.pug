@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        //Meta tags
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="autor", content="")
+        meta(name="copyright", content="")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        meta(name="theme-color", content="#1B396A")
+        //Open graph protocol
+        meta(property="og:title", content="")
+        meta(property="og:description", content="")
+        meta(property="og:type", content="")
+        meta(property="og:img", content="")
+        meta(property="og:url", content="")
+        //Link tags
+        link(rel="stylesheet", type="text/css", href="./origin/css/styles.css")
+        link(rel="icon", href="./origin/multimedia/img/favicon.png")
+        link(rel="apple-touch-icon", href="")
+        link(rel="canonical", href="")
+        script(src="./origin/js/index.js", type="module", defer)
+        title Inicio
+    body 
+        noscript 
+            h2 Tú necesitas tener habilitado JavaScript en tu navegador para poder acceder a esta página.
+        div.container
+            header.header--fs
+                div.header-container
+                    a(href="./").header-container__img
+                        img(src="./origin/multimedia/img/favicon.png", alt="ITCM", title="ITCM").header-container__logo
+            main.index
+                div.index-container
+                    h1.index-container__h1 Inventario depresivo de Beck II
+                    p.index-container__p El Instituto tecnologico de ciudad Madero se preocupa por la salud mental de sus estiduantes.Para evaluar el estado de salud mental del alumno en busca de un posible indicio de sintomas de ansiedad o sintomas depresivos, se proporciona la posibilidad de realizar siguiente formulario.Presiona el siguiente boton para iniciar el formulario. Favor de iniciar sesión primero para poder redireccionarlo.
+                    a(href="./login").index-container__a Iniciar sesión
+            footer.footer--fs
+                div.footer-container
+                    p.footer-container__p ITCM©

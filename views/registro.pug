@@ -1,0 +1,111 @@
+doctype html
+html(lang="en")
+    head
+        //Meta tags
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="", content="")
+        meta(name="", content="")
+        meta(name="", content="")
+        meta(name="", content="")
+        meta(name="", content="")
+        //Open graph protocol
+        meta(property="og:", content="")
+        meta(property="og:", content="")
+        meta(property="og:", content="")
+        meta(property="og:", content="")
+        meta(property="og:", content="")
+        //Link tags
+        link(rel="stylesheet", type="text/css", href="./origin/css/styles.css")
+        link(rel="icon", href="./origin/multimedia/img/favicon.png")
+        link(rel="apple-touch-icon", href="")
+        link(rel="canonical", href="")
+        script(src="./origin/js/index.js", type="module", defer) 
+        title Registro de usuarios
+    body 
+        noscript 
+            h2 Tú necesitas tener habilitado JavaScript en tu navegador para acceder a esta página.
+        div.container
+            header.header
+                div.header-container
+                    a(href="./").header-container__img
+                        img(src="./origin/multimedia/img/favicon.png", alt="ITCM", title="ITCM").header-container__logo
+                    nav.header-container__nav
+                        a(href="./resultados").header-container__a Resultados
+                        p.header-container__p--inline Administrador
+                    div.header-container__modal
+                        p.header-container__p ¿Estás segur@ que quieres salir?
+                        a(href="./cerrar").header-container__logout Salir 
+            main.main
+                div.main-container--flex
+                    form(action="/registro", method="POST", autocomplete="off").main-container__register
+                        h1.main-container__h1 Registro de usuarios
+                        label.main-container__label Nombre:
+                        input(type="text", name="name", pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$", required).main-container__input
+                        span(id="name").main-container__error Solo puedes ingresar letras y espacios
+                        label.main-container__label Apellido paterno:
+                        input(type="text", name="paternalSurname", pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$", required).main-container__input
+                        span(id="paternalSurname").main-container__error Solo puedes ingresar letras y espacios
+                        label.main-container__label Apellido materno:
+                        input(type="text", name="maternalSurname", pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required).main-container__input
+                        span(id="maternalSurname").main-container__error Solo puedes ingresar letras y espacios
+                        label.main-container__label Sexo:
+                        input(type="text", name="sex", pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$", required).main-container__input
+                        span(id="sex").main-container__error Solo puedes ingresar letras y espacios
+                        label.main-container__label No. Control:
+                        input(type="number", name="noControl", pattern="^.{8}$", required).main-container__input
+                        span(id="noControl").main-container__error Tu número de control debe tener 8 digitos
+                        label.main-container__label Carrera:
+                        select(name="career", required).main-container__input
+                            option(value="").main-container__option Seleccione su carrera 
+                            option(value="sistemas").main-container__option Ingeniería en sistemas 
+                            option(value="ambiental").main-container__option Ingeniería ambiental
+                            option(value="mecanica").main-container__option Ingeniería mecanica
+                            option(value="industrial").main-container__option Ingeniería industrial
+                            option(value="geociencias").main-container__option Ingeniería geociencias
+                            option(value="empresarial").main-container__option Ingeniería gestión empresarial 
+                            option(value="eléctrica").main-container__option Ingeniería eléctrica
+                            option(value="electrónica").main-container__option Ingeniería electrónica
+                            option(value="petrolera").main-container__option Ingeniería petrolera
+                            option(value="química").main-container__option Ingeniería química
+                        label.main-container__label Semestre:
+                        select(name="semester", required).main-container__input
+                            option(value="").main-container__option Seleccione su semestre 
+                            option(value="primero").main-container__option 1°Semestre
+                            option(value="segundo").main-container__option 2°Semestre 
+                            option(value="tercero").main-container__option 3°Semestre
+                            option(value="cuarto").main-container__option 4°Semestre
+                            option(value="quinto").main-container__option 5°Semestre
+                            option(value="sexto").main-container__option 6°Semestre
+                            option(value="septimo").main-container__option 7°Semestre
+                            option(value="octavo").main-container__option 8°Semestre
+                            option(value="noveno").main-container__option 9°Semestre
+                            option(value="decimo").main-container__option 10°Semestre
+                            option(value="onceavo").main-container__option 11°Semestre
+                            option(value="doceavo").main-container__option 12°Semestre
+                        label.main-container__label Correo:
+                        input(type="email", name="email", pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$", required).main-container__input
+                        span(id="email").main-container__error Formato de correo no valido
+                        label.main-container__label Confirmar el correo:
+                        input(type="email", name="emailConfirm", pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required).main-container__input
+                        span(id="emailConfirm").main-container__error Formato de correo no valido
+                        label.main-container__label Contraseña:
+                        input(type="text", name="password", pattern="^.{8,}$", required).main-container__input
+                        span(id="password").main-container__error La contraseña debe tener más de 8 caracteres
+                        label.main-container__label Confirmar contraseña:
+                        input(type="text", name="passwordConfirm", pattern="^.{8,}$", required).main-container__input
+                        span(id="passwordConfirm").main-container__error La contraseña debe tener más de 8 caracteres
+                        input(type="submit", value="Enviar").main-container__submit
+                    if modalSuccess === true    
+                        div.main-container__ms.is-visible
+                            div.main-container__ms-container
+                                h2.main-container__h2 El alumno se ha registrado correctamente.
+                                button.main-container__btn Cerrar
+                    if modalError === true    
+                        div.main-container__ms.is-visible
+                            div.main-container__ms-container
+                                h2.main-container__h2 El correo y la contraseña deben coincidir.
+                                button.main-container__btn Cerrar
+            footer.footer
+                div.footer-container
+                    p.footer-container__p ITCM©

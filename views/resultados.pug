@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+    head
+        //Meta tags
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="autor", content="")
+        meta(name="copyright", content="")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        meta(name="theme-color", content="#1B396A")
+        //Open Graph protocol
+        meta(property="og:title", content="")
+        meta(property="og:description", content="")
+        meta(property="og:type", content="")
+        meta(property="og:img", content="")
+        meta(property="og:url", content="")
+        //Link tags
+        link(rel="stylesheet", type="text/css", href="./origin/css/styles.css")
+        link(rel="icon", href="./origin/multimedia/img/favicon.png")
+        link(rel="apple-touch-icon", href="")
+        link(rel="canonical", href="")
+        script(src="./origin/js/index.js", type="module", defer) 
+        title Resultados
+    body 
+        noscript 
+            h2 Tú debes tener habilitado JavaScript en tu navegador para acceder a esta página.
+        div.container
+            header.header
+                div.header-container
+                    a(href="./").header-container__img
+                        img(src="./origin/multimedia/img/favicon.png", alt="ITCM", title="ITCM").header-container__logo
+                    nav.header-container__nav
+                        a(href="./registro").header-container__a Registro
+                        p.header-container__p--inline Administrador
+                    div.header-container__modal
+                        p.header-container__p ¿Estás segur@ que quieres salir?
+                        a(href="./cerrar").header-container__logout Salir 
+            main.main
+                div.main-container
+                    h1.main-container__h1 Alumnos en monitoreo
+                    p.main-container__p.main-container__p--center En esta tabla se presentan los alumnos y sus resultados de seguimiento.
+                    div.main-container__overflow
+                        table.main-container__table
+                            thead.main-container__thead
+                                tr.main-container__tr
+                                    th.main-container__th Usuarios
+                                    th.main-container__th No.Control
+                                    th.main-container__th Carrera
+                                    th.main-container__th Resultados 
+                                    th.main-container__th Respuestas
+                            tbody.main-container__tbody
+                                if results.length === 0 
+                                    td(colspan="5").main-container__td No existen registros de alumnos
+                                else 
+                                    each result in results
+                                        tr.main-container__tr
+                                            td.main-container__td #{result.nombre + " " + result.apellido_paterno + " " + result.apellido_materno}
+                                            td.main-container__td #{result.numero_control}
+                                            td.main-container__td #{result.carrera}
+                                            td.main-container__td #{result.resultado}
+                                            td.main-container__td 
+                                                a(href=`${result.respuesta}`, download).main-container__a archivo
+            footer.footer
+                div.footer-container
+                    p.footer-container__p ITCM© 

@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    head
+        //Meta tags
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="autor", content="")
+        meta(name="copyright", content="")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        meta(name="theme-color", content="")
+        //Open graph protocol
+        meta(property="og:title", content="")
+        meta(property="og:description", content="")
+        meta(property="og:type", content="")
+        meta(property="og:img", content="")
+        meta(property="og:url", content="")
+        //Link tags
+        link(rel="stylesheet", type="text/css", href="./origin/css/styles.css")
+        link(rel="icon", href="./origin/multimedia/img/favicon.png")
+        link(rel="apple-touch-icon", href="")
+        link(rel="canonical", href="")
+        script(src="./origin/js/index.js", type="module", defer)
+        title Login
+    body 
+        noscript 
+            h2 Tú necesitas tener habilitado JavaScript en tu navegador para acceder a esta página. 
+        div.container
+            header.header--fs
+                div.header-container
+                    a(href="./").header-container__img
+                        img(src="./origin/multimedia/img/favicon.png", alt="ITCM", title="ITCM").header-container__logo
+            main.main
+                div.main-container--flex
+                    form(action="/login", method="POST", autocomplete="off").main-container__login
+                        h1.main-container__h1 Inicio de sesión
+                        label.main-container__label Correo institucional:
+                        input(name="email", type="email", pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$", required).main-container__input
+                        span(id="email").main-container__error Formato de correo no valido
+                        label.main-container__label Contraseña: 
+                        input(name="password", type="password", pattern="^.{8,}$", required).main-container__input
+                        span(id="password").main-container__error La contraseña debe tener más de 8 caracteres
+                        input(type="submit", value="Enviar").main-container__submit
+                    if modalError === true
+                        div.main-container__ms.is-visible
+                            div.main-container__ms-container
+                                h2.main-container__h2 Correo o contraseña incorrectas.
+                                button.main-container__btn Cerrar
+            footer.footer--fs
+                div.footer-container
+                    p.footer-container__p ITCM©
+
+

@@ -1,0 +1,365 @@
+doctype html
+html(lang="en")
+    head
+        //Meta tags
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="autor", content="")
+        meta(name="copyright", content="")
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+        meta(name="theme-color", content="#1B396A")
+        //Open graph protocol
+        meta(property="og:title", content="")
+        meta(property="og:description", content="")
+        meta(property="og:type", content="")
+        meta(property="og:img", content="")
+        meta(property="og:url", content="")
+        //Link tags
+        link(rel="stylesheet", type="text/css", href="./origin/css/styles.css")
+        link(rel="icon", href="./origin/multimedia/img/favicon.png")
+        link(rel="apple-touch-icon", href="")
+        link(rel="canonical", href="")
+        script(src="./origin/js/index.js", type="module", defer)
+        title Formulario
+    body 
+        noscript 
+            h2 Tú necesitas tener habilitado JavaScript en tu navegador para acceder a esta página.
+        div.container
+            header.header
+                div.header-container
+                    a(href="./").header-container__img
+                        img(src="./origin/multimedia/img/favicon.png", alt="ITCM", title="ITCM").header-container__logo
+                    p.header-container__p--inline #{decode.name}
+                    div.header-container__modal
+                        p.header-container__p ¿Estás segur@ que quieres salir?
+                        a(href="./cerrar").header-container__logout Salir 
+            main.main 
+                div.main-container--flex
+                    form(action="", method="POST", autocomplete="off").main-container__form
+                        h1.main-container__h1 Inventario depresivo de beck II
+                        p.main-container__p El Inventario Depresivo de Beck (BDI) es una herramienta psicométrica diseñada para medir la gravedad de los síntomas depresivos y ansiosos en individuos adolescentes y adultos. Este cuestionario consta de 21 grupos de afirmaciones. Cada pregunta cuenta con 4 respuestas con un valor de 0 a 3 de puntaje en ese orden. Por favor, lea con atención cada uno de ellos cuidadosamente. Luego elija uno de cada grupo, el que mejor describa el modo como se ha sentido las últimas dos semanas, incluyendo el día de hoy.Marque con un círculo el número correspondiente al enunciado elegido Si varios enunciados de un mismo grupo le parecen igualmente apropiados, marque el número más alto (recordando que el valor de las respuestas es de 0 a 3).
+                        label(for="").main-container__label.main-container__label--bock 1. Tristeza:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p1-r1", type="radio", name="one", value="0", data-value="No me siento triste", required).main-container__radio
+                                label(for="p1-r1").main-container__rtext No me siento triste
+                            div    
+                                input(id="p1-r2", type="radio", name="one", value="1", data-value="Me siento triste gran parte del tiempo").main-container__radio
+                                label(for="p1-r2").main-container__rtext Me siento triste gran parte del tiempo
+                            div    
+                                input(id="p1-r3", type="radio", name="one", value="2", data-value="Me siento triste todo el tiempo").main-container__radio
+                                label(for="p1-r3").main-container__rtext Me siento triste todo el tiempo
+                            div    
+                                input(id="p1-r4", type="radio", name="one", value="3", data-value="Me siento tan triste o soy tan infeliz que no puedo soportarlo").main-container__radio
+                                label(for="p1-r4").main-container__rtext Me siento tan triste o soy tan infeliz que no puedo soportarlo
+                        input(type="hidden", name="hiddenOne", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 2. Pesimismo:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p2-r1", type="radio", name="two", value="0", data-value="No estoy desalentado respecto del mi futuro", required).main-container__radio
+                                label(for="p2-r1").main-container__rtext No estoy desalentado respecto del mi futuro
+                            div    
+                                input(id="p2-r2", type="radio", name="two", value="1", data-value="Me siento más desalentado respecto de mi futuro que lo que solía estarlo").main-container__radio
+                                label(for="p2-r2").main-container__rtext Me siento más desalentado respecto de mi futuro que lo que solía estarlo
+                            div    
+                                input(id="p2-r3", type="radio", name="two", value="2", data-value="No espero que las cosas funcionen para mi").main-container__radio
+                                label(for="p2-r3").main-container__rtext No espero que las cosas funcionen para mi
+                            div    
+                                input(id="p2-r4", type="radio", name="two", value="3", data-value="Siento que no hay esperanza para mi futuro y que sólo puede empeorar").main-container__radio
+                                label(for="p2-r4").main-container__rtext Siento que no hay esperanza para mi futuro y que sólo puede empeorar
+                        input(type="hidden", name="hiddenTwo", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 3. Fracaso:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p3-r1", type="radio", name="three", value="0", data-value="No me siento como un fracasado.", required).main-container__radio
+                                label(for="p3-r1").main-container__rtext No me siento como un fracasado.
+                            div    
+                                input(id="p3-r2", type="radio", name="three", value="1", data-value="He fracasado más de lo que hubiera debido").main-container__radio
+                                label(for="p3-r2").main-container__rtext He fracasado más de lo que hubiera debido
+                            div    
+                                input(id="p3-r3", type="radio", name="three", value="2", data-value="Cuando miro hacia atrás, veo muchos fracasos").main-container__radio
+                                label(for="p3-r3").main-container__rtext Cuando miro hacia atrás, veo muchos fracasos
+                            div    
+                                input(id="p3-r4", type="radio", name="three", value="3", data-value="Siento que como persona soy un fracaso total.").main-container__radio
+                                label(for="p3-r4").main-container__rtext Siento que como persona soy un fracaso total.
+                        input(type="hidden", name="hiddenThree", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 4. Pérdida de placer:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p4-r1", type="radio", name="four", value="0", data-value="Obtengo tanto placer como siempre por las cosas de las que disfruto", required).main-container__radio
+                                label(for="p4-r1").main-container__rtext Obtengo tanto placer como siempre por las cosas de las que disfruto
+                            div    
+                                input(id="p4-r2", type="radio", name="four", value="1", data-value="No disfruto tanto de las cosas como solía hacerlo").main-container__radio
+                                label(for="p4-r2").main-container__rtext No disfruto tanto de las cosas como solía hacerlo
+                            div    
+                                input(id="p4-r3", type="radio", name="four", value="2", data-value="Obtengo muy poco placer de las cosas que solía disfrutar").main-container__radio
+                                label(for="p4-r3").main-container__rtext Obtengo muy poco placer de las cosas que solía disfrutar
+                            div    
+                                input(id="p4-r4", type="radio", name="four", value="3", data-value="No puedo obtener ningún placer de las cosas de las que solía disfrutar").main-container__radio
+                                label(for="p4-r4").main-container__rtext No puedo obtener ningún placer de las cosas de las que solía disfrutar
+                        input(type="hidden", name="hiddenFour", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 5. Sentimiento de culpa:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p5-r1", type="radio", name="five", value="0", data-value="No me siento particularmente culpable", required).main-container__radio
+                                label(for="p5-r1").main-container__rtext No me siento particularmente culpable
+                            div    
+                                input(id="p5-r2", type="radio", name="five", value="1", data-value="Me siento culpable respecto de varias cosas que he hecho o que debería haber hecho").main-container__radio
+                                label(for="p5-r2").main-container__rtext Me siento culpable respecto de varias cosas que he hecho o que debería haber hecho
+                            div    
+                                input(id="p5-r3", type="radio", name="five", value="2", data-value="Me siento bastante culpable la mayor parte del tiempo").main-container__radio
+                                label(for="p5-r3").main-container__rtext Me siento bastante culpable la mayor parte del tiempo
+                            div    
+                                input(id="p5-r4", type="radio", name="five", value="3", data-value="Me siento culpable todo el tiempo").main-container__radio
+                                label(for="p5-r4").main-container__rtext Me siento culpable todo el tiempo
+                        input(type="hidden", name="hiddenFive", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 6. Sentimiento de castigo:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p6-r1", type="radio", name="six", value="0", data-value="No siento que este siendo castigado", required).main-container__radio
+                                label(for="p6-r1").main-container__rtext No siento que este siendo castigado
+                            div    
+                                input(id="p6-r2", type="radio", name="six", value="1", data-value="Siento que tal vez pueda ser castigado").main-container__radio
+                                label(for="p6-r2").main-container__rtext Siento que tal vez pueda ser castigado
+                            div    
+                                input(id="p6-r3", type="radio", name="six", value="2", data-value="Espero ser castigado").main-container__radio
+                                label(for="p6-r3").main-container__rtext Espero ser castigado
+                            div    
+                                input(id="p6-r4", type="radio", name="six", value="3", data-value="Siento que estoy siendo castigado").main-container__radio
+                                label(for="p6-r4").main-container__rtext Siento que estoy siendo castigado
+                        input(type="hidden", name="hiddenSix", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 7. Disconformidad con uno mismo:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p7-r1", type="radio", name="seven", value="0", data-value="Siento acerca de mi lo mismo que siempre", required).main-container__radio
+                                label(for="p7-r1").main-container__rtext Siento acerca de mi lo mismo que siempre
+                            div    
+                                input(id="p7-r2", type="radio", name="seven", value="1", data-value="He perdido la confianza en mí mismo").main-container__radio
+                                label(for="p7-r2").main-container__rtext He perdido la confianza en mí mismo
+                            div    
+                                input(id="p7-r3", type="radio", name="seven", value="2", data-value="Estoy decepcionado conmigo mismo").main-container__radio
+                                label(for="p7-r3").main-container__rtext Estoy decepcionado conmigo mismo
+                            div    
+                                input(id="p7-r4", type="radio", name="seven", value="3", data-value="No me gusto a mí mismo").main-container__radio
+                                label(for="p7-r4").main-container__rtext No me gusto a mí mismo
+                        input(type="hidden", name="hiddenSeven", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 8. Autocrítica:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p8-r1", type="radio", name="eight", value="0", data-value="No me critico ni me culpo más de lo habitual", required).main-container__radio
+                                label(for="p8-r1").main-container__rtext No me critico ni me culpo más de lo habitual
+                            div    
+                                input(id="p8-r2", type="radio", name="eight", value="1", data-value="Estoy más crítico conmigo mismo de lo que solía estarlo").main-container__radio
+                                label(for="p8-r2").main-container__rtext Estoy más crítico conmigo mismo de lo que solía estarlo
+                            div    
+                                input(id="p8-r3", type="radio", name="eight", value="2", data-value="Me critico a mí mismo por todos mis errores").main-container__radio
+                                label(for="p8-r3").main-container__rtext Me critico a mí mismo por todos mis errores
+                            div    
+                                input(id="p8-r4", type="radio", name="eight", value="3", data-value="Me culpo a mí mismo por todo lo malo que sucede").main-container__radio
+                                label(for="p8-r4").main-container__rtext Me culpo a mí mismo por todo lo malo que sucede
+                        input(type="hidden", name="hiddenEight", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 9. Pensamientos o deseos suicidas:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p9-r1", type="radio", name="nine", value="0", data-value="No tengo ningún pensamiento de matarme", required).main-container__radio
+                                label(for="p9-r1").main-container__rtext No tengo ningún pensamiento de matarme
+                            div    
+                                input(id="p9-r2", type="radio", name="nine", value="1", data-value="He tenido pensamientos de matarme, pero no lo haría").main-container__radio
+                                label(for="p9-r2").main-container__rtext He tenido pensamientos de matarme, pero no lo haría
+                            div    
+                                input(id="p9-r3", type="radio", name="nine", value="2", data-value="Querría matarme").main-container__radio
+                                label(for="p9-r3").main-container__rtext Querría matarme
+                            div    
+                                input(id="p9-r4", type="radio", name="nine", value="3", data-value="Me mataría si tuviera la oportunidad de hacerlo").main-container__radio
+                                label(for="p9-r4").main-container__rtext Me mataría si tuviera la oportunidad de hacerlo
+                        input(type="hidden", name="hiddenNine", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 10. Llanto:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p10-r1", type="radio", name="ten", value="0", data-value="No lloro más de lo que solía hacerlo", required).main-container__radio
+                                label(for="p10-r1").main-container__rtext No lloro más de lo que solía hacerlo
+                            div    
+                                input(id="p10-r2", type="radio", name="ten", value="1", data-value="Lloro más de lo que solía hacerlo").main-container__radio
+                                label(for="p10-r2").main-container__rtext Lloro más de lo que solía hacerlo
+                            div    
+                                input(id="p10-r3", type="radio", name="ten", value="2", data-value="Lloro por cualquier pequeñez").main-container__radio
+                                label(for="p10-r3").main-container__rtext Lloro por cualquier pequeñez
+                            div    
+                                input(id="p10-r4", type="radio", name="ten", value="3", data-value="Siento ganas de llorar pero no puedo").main-container__radio
+                                label(for="p10-r4").main-container__rtext Siento ganas de llorar pero no puedo
+                        input(type="hidden", name="hiddenTen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 11. Agitación:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p11-r1", type="radio", name="eleven", value="0", data-value="No estoy más inquieto o tenso que lo habitual", required).main-container__radio
+                                label(for="p11-r1").main-container__rtext No estoy más inquieto o tenso que lo habitual
+                            div    
+                                input(id="p11-r2", type="radio", name="eleven", value="1", data-value="Me siento más inquieto o tenso que lo habitual").main-container__radio
+                                label(for="p11-r2").main-container__rtext Me siento más inquieto o tenso que lo habitual
+                            div    
+                                input(id="p11-r3", type="radio", name="eleven", value="2", data-value="Estoy tan inquieto o agitado que me es difícil quedarme quieto").main-container__radio
+                                label(for="p11-r3").main-container__rtext Estoy tan inquieto o agitado que me es difícil quedarme quieto
+                            div    
+                                input(id="p11-r4", type="radio", name="eleven", value="3", data-value="Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo").main-container__radio
+                                label(for="p11-r4").main-container__rtext Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo
+                        input(type="hidden", name="hiddenEleven", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 12. Pérdida de interés:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p12-r1", type="radio", name="twelve", value="0", data-value="No he perdido el interés en otras actividades o personas", required).main-container__radio
+                                label(for="p12-r1").main-container__rtext No he perdido el interés en otras actividades o personas
+                            div    
+                                input(id="p12-r2", type="radio", name="twelve", value="1", data-value="Estoy menos interesado que antes en otras personas o cosas").main-container__radio
+                                label(for="p12-r2").main-container__rtext Estoy menos interesado que antes en otras personas o cosas
+                            div    
+                                input(id="p12-r3", type="radio", name="twelve", value="2", data-value="He perdido casi todo el interés en otras personas o cosas").main-container__radio
+                                label(for="p12-r3").main-container__rtext He perdido casi todo el interés en otras personas o cosas
+                            div    
+                                input(id="p12-r4", type="radio", name="twelve", value="3", data-value="Me es difícil interesarme por algo").main-container__radio
+                                label(for="p12-r4").main-container__rtext Me es difícil interesarme por algo
+                        input(type="hidden", name="hiddenTwelve", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 13. Indecisión:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p13-r1", type="radio", name="thirteen", value="0", data-value="Tomo mis propias decisiones tan bien como siempre", required).main-container__radio
+                                label(for="p13-r1").main-container__rtext Tomo mis propias decisiones tan bien como siempre
+                            div    
+                                input(id="p13-r2", type="radio", name="thirteen", value="1", data-value="Me resulta más difícil que de costumbre tomar decisiones").main-container__radio
+                                label(for="p13-r2").main-container__rtext Me resulta más difícil que de costumbre tomar decisiones
+                            div    
+                                input(id="p13-r3", type="radio", name="thirteen", value="2", data-value="Encuentro mucha más dificultad que antes para tomar decisiones").main-container__radio
+                                label(for="p13-r3").main-container__rtext Encuentro mucha más dificultad que antes para tomar decisiones
+                            div    
+                                input(id="p13-r4", type="radio", name="thirteen", value="3", data-value="Tengo problemas para tomar cualquier decisión").main-container__radio
+                                label(for="p13-r4").main-container__rtext Tengo problemas para tomar cualquier decisión
+                        input(type="hidden", name="hiddenThirteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 14. Desvalorización:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p14-r1", type="radio", name="fourteen", value="0", data-value="No siento que yo no sea valioso", required).main-container__radio
+                                label(for="p14-r1").main-container__rtext No siento que yo no sea valioso
+                            div    
+                                input(id="p14-r2", type="radio", name="fourteen", value="1", data-value="No me considero a mi mismo tan valioso y útil como solía considerarme").main-container__radio
+                                label(for="p14-r2").main-container__rtext No me considero a mi mismo tan valioso y útil como solía considerarme
+                            div    
+                                input(id="p14-r3", type="radio", name="fourteen", value="2", data-value="Me siento menos valioso cuando me comparo con otros").main-container__radio
+                                label(for="p14-r3").main-container__rtext Me siento menos valioso cuando me comparo con otros
+                            div    
+                                input(id="p14-r4", type="radio", name="fourteen", value="3", data-value="Siento que no valgo nada").main-container__radio
+                                label(for="p14-r4").main-container__rtext Siento que no valgo nada
+                        input(type="hidden", name="hiddenFourteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 15. Pérdida de energía:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p15-r1", type="radio", name="fifteen", value="0", data-value="Tengo tanta energía como siempre", required).main-container__radio
+                                label(for="p15-r1").main-container__rtext Tengo tanta energía como siempre
+                            div    
+                                input(id="p15-r2", type="radio", name="fifteen", value="1", data-value="Tengo menos energía que la que solía tener").main-container__radio
+                                label(for="p15-r2").main-container__rtext Tengo menos energía que la que solía tener
+                            div    
+                                input(id="p15-r3", type="radio", name="fifteen", value="2", data-value="No tengo suficiente energía para hacer demasiado").main-container__radio
+                                label(for="p15-r3").main-container__rtext No tengo suficiente energía para hacer demasiado
+                            div    
+                                input(id="p15-r4", type="radio", name="fifteen", value="3", data-value="No tengo energía suficiente para hacer nada").main-container__radio
+                                label(for="p15-r4").main-container__rtext No tengo energía suficiente para hacer nada
+                        input(type="hidden", name="hiddenFifteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 16. Cambios en los hábitos de sueño:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p16-r1", type="radio", name="sixteen", value="0", data-value="No he experimentado ningún cambio en mis hábitos de sueño", required).main-container__radio
+                                label(for="p16-r1").main-container__rtext No he experimentado ningún cambio en mis hábitos de sueño
+                            div    
+                                input(id="p16-r2", type="radio", name="sixteen", value="1", data-value="Duermo un poco más/menos que lo habitual.").main-container__radio
+                                label(for="p16-r2").main-container__rtext Duermo un poco más/menos que lo habitual.
+                            div    
+                                input(id="p16-r3", type="radio", name="sixteen", value="2", data-value="Duermo mucho más/menos que lo habitual").main-container__radio
+                                label(for="p16-r3").main-container__rtext Duermo mucho más/menos que lo habitual
+                            div    
+                                input(id="p16-r4", type="radio", name="sixteen", value="3", data-value="Duermo la mayor parte del día/Me despierto 1-2 horas más temprano y no puedo volver a dormirme").main-container__radio
+                                label(for="p16-r4").main-container__rtext Duermo la mayor parte del día/Me despierto 1-2 horas más temprano y no puedo volver a dormirme
+                        input(type="hidden", name="hiddenSixteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 17. Irritabilidad:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p17-r1", type="radio", name="seventeen", value="0", data-value="No estoy tan irritable que lo habitual", required).main-container__radio
+                                label(for="p17-r1").main-container__rtext No estoy tan irritable que lo habitual
+                            div    
+                                input(id="p17-r2", type="radio", name="seventeen", value="1", data-value="No estoy tan irritable que lo habitual").main-container__radio
+                                label(for="p17-r2").main-container__rtext Estoy más irritable que lo habitual
+                            div    
+                                input(id="p17-r3", type="radio", name="seventeen", value="2", data-value="Estoy mucho más irritable que lo habitual").main-container__radio
+                                label(for="p17-r3").main-container__rtext Estoy mucho más irritable que lo habitual
+                            div    
+                                input(id="p17-r4", type="radio", name="seventeen", value="3", data-value="Estoy irritable todo el tiempo").main-container__radio
+                                label(for="p17-r4").main-container__rtext Estoy irritable todo el tiempo
+                        input(type="hidden", name="hiddenSeventeen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 18. Cambios en el apetito:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p18-r1", type="radio", name="eighteen", value="0", data-value="No he experimentado ningún cambio en mi apetito", required).main-container__radio
+                                label(for="p18-r1").main-container__rtext No he experimentado ningún cambio en mi apetito
+                            div    
+                                input(id="p18-r2", type="radio", name="eighteen", value="1", data-value="Mi apetito es un poco menor/mayor que lo habitual").main-container__radio
+                                label(for="p18-r2").main-container__rtext Mi apetito es un poco menor/mayor que lo habitual
+                            div    
+                                input(id="p18-r3", type="radio", name="eighteen", value="2", data-value="Mi apetito es mucho menor/mayor que antes").main-container__radio
+                                label(for="p18-r3").main-container__rtext Mi apetito es mucho menor/mayor que antes
+                            div    
+                                input(id="p18-r4", type="radio", name="eighteen", value="3", data-value="No tengo apetito en absoluto/Quiero comer todo el día").main-container__radio
+                                label(for="p18-r4").main-container__rtext No tengo apetito en absoluto/Quiero comer todo el día
+                        input(type="hidden", name="hiddenEighteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 19. Dificultad de concentración:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p19-r1", type="radio", name="nineteen", value="0", data-value="Puedo concentrarme tan bien como siempre", required).main-container__radio
+                                label(for="p19-r1").main-container__rtext Puedo concentrarme tan bien como siempre
+                            div    
+                                input(id="p19-r2", type="radio", name="nineteen", value="1", data-value="No puedo concentrarme tan bien como habitualmente").main-container__radio
+                                label(for="p19-r2").main-container__rtext No puedo concentrarme tan bien como habitualmente
+                            div    
+                                input(id="p19-r3", type="radio", name="nineteen", value="2", data-value="Me es difícil mantener la mente en algo por mucho tiempo").main-container__radio
+                                label(for="p19-r3").main-container__rtext Me es difícil mantener la mente en algo por mucho tiempo
+                            div    
+                                input(id="p19-r4", type="radio", name="nineteen", value="3", data-value="Encuentro que no puedo concentrarme en nada").main-container__radio
+                                label(for="p19-r4").main-container__rtext Encuentro que no puedo concentrarme en nada
+                        input(type="hidden", name="hiddenNineteen", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 20. Cansancio o fatiga:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p20-r1", type="radio", name="twenty", value="0", data-value="No estoy más cansado o fatigado que lo habitual", required).main-container__radio
+                                label(for="p20-r1").main-container__rtext No estoy más cansado o fatigado que lo habitual
+                            div    
+                                input(id="p20-r2", type="radio", name="twenty", value="1", data-value="No estoy más cansado o fatigado que lo habitual").main-container__radio
+                                label(for="p20-r2").main-container__rtext Me fatigo o me canso más fácilmente que lo habitual
+                            div    
+                                input(id="p20-r3", type="radio", name="twenty", value="2", data-value="Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer").main-container__radio
+                                label(for="p20-r3").main-container__rtext Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer
+                            div    
+                                input(id="p20-r4", type="radio", name="twenty", value="3", data-value="Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer").main-container__radio
+                                label(for="p20-r4").main-container__rtext Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer
+                        input(type="hidden", name="hiddenTwenty", value="").main-container__hidden
+                        label(for="").main-container__label.main-container__label--bock 21. Salud:
+                        fieldset.main-container__fieldset
+                            div 
+                                input(id="p21-r1", type="radio", name="twentyOne", value="0", data-value="Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer", required).main-container__radio
+                                label(for="p21-r1").main-container__rtext No estoy preocupado por mi salud
+                            div    
+                                input(id="p21-r2", type="radio", name="twentyOne", value="1", data-value="Me preocupan los problemas físicos como dolores, etc; el malestar del estómago o los resfriados").main-container__radio
+                                label(for="p21-r2").main-container__rtext Me preocupan los problemas físicos como dolores, etc; el malestar del estómago o los resfriados
+                            div    
+                                input(id="p21-r3", type="radio", name="twentyOne", value="2", data-value="Me preocupan las enfermedades y me resulta difícil pensar en otras cosas").main-container__radio
+                                label(for="p21-r3").main-container__rtext Me preocupan las enfermedades y me resulta difícil pensar en otras cosas
+                            div    
+                                input(id="p21-r4", type="radio", name="twentyOne", value="3", data-value="Estoy tan preocupado por las enfermedades que soy incapaz de pensar en otras cosas").main-container__radio
+                                label(for="p21-r4").main-container__rtext Estoy tan preocupado por las enfermedades que soy incapaz de pensar en otras cosas
+                        input(type="hidden", name="hiddenTwentyOne", value="").main-container__hidden
+                        input(type="submit", value="Enviar").main-container__submit
+                    if modalSuccess === true    
+                        div.main-container__ms.is-visible
+                            div.main-container__ms-container
+                                h2.main-container__h2 El formulario ha sido procesado correctamente.
+                                button.main-container__btn Cerrar
+            footer.footer
+                div.footer-container
+                    p.footer-container__p ITCM©
